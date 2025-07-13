@@ -18,9 +18,14 @@ pkgver() {
   git describe --long | sed "s/^v//;s/\([^-]*-g\)/r\1/;s/-/./g"
 }
 
+prepare() {
+  cd "$srcdir/zd"
+  cargo fetch --locked
+}
+
 build() {
   cd "$srcdir/zd"
-  cargo build --release --locked
+  cargo build --release --frozen
 }
 
 package() {
