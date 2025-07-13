@@ -1,0 +1,17 @@
+pkgbase = zd-git
+	pkgdesc = Extendable fuzzy directory selector
+	pkgver = 0.2.3.r5.ga6ceb0d
+	pkgrel = 1
+	url = https://github.com/deorbil/zd
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = fzf
+	provides = zd
+	conflicts = zd
+	options = !lto
+	source = git+https://github.com/deorbil/zd.git
+	sha256sums = SKIP
+
+pkgname = zd-git
