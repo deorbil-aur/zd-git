@@ -31,4 +31,6 @@ build() {
 package() {
   cd "$srcdir/zd"
   install -Dm755 "target/release/zd" "$pkgdir/usr/bin/zd"
+  install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/zd/LICENSE"
+  install -Dm644 "README.md" "$pkgdir/usr/share/doc/zd/README.md"
 }
